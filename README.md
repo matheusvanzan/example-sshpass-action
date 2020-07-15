@@ -1,5 +1,7 @@
 # SSHPASS Github Action
 
+![CI](https://github.com/matheusvanzan/sshpass-action-example/workflows/CI/badge.svg)
+
 Example usage for [sshpass-action](https://github.com/matheusvanzan/sshpass-action)
 
 ```
