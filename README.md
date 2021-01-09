@@ -6,11 +6,42 @@ Example usage for [sshpass-action](https://github.com/matheusvanzan/sshpass-acti
 
 ```
 - name: Run sshpass commands
-  uses: matheusvanzan/sshpass-action@v1
+  uses: matheusvanzan/sshpass-action@v1.1
   with:
     host: ${{ secrets.SERVER_HOST }}
-    username: ${{ secrets.SERVER_USERNAME }}
-    password: ${{ secrets.SERVER_PASSWORD }}
+    user: ${{ secrets.SERVER_USER }}
+    pass: ${{ secrets.SERVER_PASS }}
+    run: |
+      # your 
+      # commands
+      # here
+```
+
+Optional ssh port
+
+```
+- name: Run sshpass commands
+  uses: matheusvanzan/sshpass-action@v1.1
+  with:
+    host: ${{ secrets.SERVER_HOST }}
+    port: 22
+    user: ${{ secrets.SERVER_USER }}
+    pass: ${{ secrets.SERVER_PASS }}
+    run: |
+      # your 
+      # commands
+      # here
+```
+
+Optional private key. In this case it will ignore the password if provided.
+
+```
+- name: Run sshpass commands
+  uses: matheusvanzan/sshpass-action@v1.1
+  with:
+    host: ${{ secrets.SERVER_HOST }}
+    user: ${{ secrets.SERVER_USER }}
+    key: ${{ secrets.SERVER_KEY }}
     run: |
       # your 
       # commands
