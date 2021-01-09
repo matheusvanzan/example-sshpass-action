@@ -32,5 +32,3 @@ jobs:
         run: |
           pwd
           ls -lha
-
-          
